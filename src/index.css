@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Light Theme - Greenish White */
+  --bg-primary: #f8faf9;
+  --bg-secondary: #f0f5f2;
+  --bg-gradient-start: rgba(248, 250, 249, 0.95);
+  --bg-gradient-end: rgba(240, 245, 242, 0.95);
+  --bg-overlay-opacity: 0.7;
+  
+  --text-primary: #1a3a2e;
+  --text-secondary: #2d5a4a;
+  --text-muted: #5a7a6b;
+  --quran-text: #1a3a2e; /* Dark green for Quran text in light mode */
+  
+  --accent-color: #2d7a4a;
+  --accent-light: #4a9a6a;
+  --accent-dark: #1a5a3a;
+  
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --hover-bg: rgba(45, 122, 74, 0.1);
+  
+  --border-color: rgba(45, 122, 74, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color-hover: rgba(0, 0, 0, 0.15);
+  
+  --success-color: #2d7a4a;
+  --error-color: #c94a4a;
+  
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme - Deep Green */
+  --bg-primary: #0d1f17;
+  --bg-secondary: #152a20;
+  --bg-gradient-start: rgba(13, 31, 23, 0.95);
+  --bg-gradient-end: rgba(21, 42, 32, 0.95);
+  --bg-overlay-opacity: 0.8;
+  
+  --text-primary: #e8f5ed;
+  --text-secondary: #c8e5d8;
+  --text-muted: #8ab8a5;
+  --quran-text: #e8f5ed; /* Light text for Quran in dark mode */
+  
+  --accent-color: #4a9a6a;
+  --accent-light: #6aba8a;
+  --accent-dark: #2d7a4a;
+  
+  --header-bg: rgba(21, 42, 32, 0.95);
+  --card-bg: rgba(13, 31, 23, 0.9);
+  --hover-bg: rgba(74, 154, 106, 0.2);
+  
+  --border-color: rgba(74, 154, 106, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-color-hover: rgba(0, 0, 0, 0.6);
+  
+  --success-color: #4a9a6a;
+  --error-color: #e84a4a;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+

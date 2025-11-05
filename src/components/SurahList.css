@@ -1,0 +1,111 @@
+.surah-list-container {
+  width: 100%;
+}
+
+.search-box {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--hover-bg);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.surah-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.surah-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.surah-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-color-hover);
+  border-color: var(--accent-color);
+  background: var(--hover-bg);
+}
+
+.surah-number {
+  background: var(--accent-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.surah-card:hover .surah-number {
+  transform: scale(1.1);
+}
+
+.surah-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.surah-name-arabic {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+  direction: rtl;
+  text-align: right;
+}
+
+.surah-name-english {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.surah-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .surah-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

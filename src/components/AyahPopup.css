@@ -1,0 +1,119 @@
+.ayah-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+.ayah-popup-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 40px var(--shadow-color-hover);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.ayah-popup-header {
+  background: var(--header-bg);
+  padding: 1.5rem;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ayah-popup-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--accent-color);
+}
+
+.ayah-popup-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.popup-close-btn:hover {
+  background: var(--hover-bg);
+}
+
+.ayah-popup-content {
+  padding: 1.5rem;
+  background: var(--card-bg);
+}
+
+.ayah-popup-text {
+  font-size: 1.5rem;
+  line-height: 2.5;
+  color: var(--quran-text);
+  text-align: right;
+  font-family: 'Amiri', 'Noto Naskh Arabic', 'Arabic Typesetting', serif;
+}
+
+.ayah-popup-actions {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  background: var(--card-bg);
+}
+
+.tafseer-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.tafseer-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .ayah-popup-container {
+    width: 95%;
+    max-width: none;
+  }
+
+  .ayah-popup-text {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+}
+
