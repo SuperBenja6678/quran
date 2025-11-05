@@ -3,10 +3,10 @@ import './ThemeToggle.css'
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage first, then system preference
+    // Check localStorage first, then default to light mode
     const savedTheme = localStorage.getItem('quran-theme')
     if (savedTheme) return savedTheme
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    return 'light' // Default to light mode
   })
 
   useEffect(() => {
